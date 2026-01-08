@@ -7,31 +7,35 @@
 </head>
 <body>
     <script>
+
         class Node {
-      constructor(value){
-this.value= value;
-this.left = null;
-this.right = null;
-      }
-    }
-    
-    class BST {
-  constructor() {
-    this.root = null; // tree starts empty
-  }
+            constructor(value){
+                this.value = value;
+                this.left = null;
+                this.right = null;
+            }
+        }
 
-  insert(value){
-    const newNode = new Node(value)
-    if(this.root === null){
-      this.root = newNode;
-      return;
-    }
-  }
-}
+        class BST {
+            constructor(){
+                this.root = null;
+            }
 
-const bst = new BST();
-bst.insert(5)
-console.log(bst)
+            insert(value){
+                const newNode = new Node(value);
+                if(this.root===null){
+                    this.root = newNode
+                }
+
+                
+            }
+        }
+
+       const tree = new BST()
+       console.log(tree)
+       tree.insert(7)
+       console.log(tree)
+       
     </script>
 </body>
 </html>
