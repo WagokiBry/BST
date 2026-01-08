@@ -56,7 +56,13 @@ search(value){
         if (value === current.value){
             return current
         }
+        if(value < current.value){
+            current = current.left
+        }else {
+            current = current.right
+        }
     }
+    return null
 }
 
         }
@@ -68,7 +74,7 @@ search(value){
        tree.insert(26)
        tree.insert(33)
        tree.insert(2)
-       console.log(tree.search(377))
+       console.log(tree.search(2677))
        console.log(tree)
      
     </script>
