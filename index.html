@@ -29,20 +29,36 @@
                 }
 let current = this.root;
 
-
-if(value < current.value){
+while(true){
+    if(value < current.value){
     if(current.left === null){
         current.left = newNode;
         return;
     }
+    current = current.left;
+}
+    else {
+        if (current.right === null){
+current.right = newNode;
+        return;
+        }
+        current = current.right;
+    }
+
+}
+
+    
 }
 
         }
-    }
+    
        const tree = new BST()
        
        tree.insert(7)
        tree.insert(4)
+       tree.insert(26)
+       tree.insert(33)
+       tree.insert(2)
        console.log(tree)
        
     </script>
